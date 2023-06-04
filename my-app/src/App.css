@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+  background-color: black;
+}
+
+
+.cssAppBody {
+  text-align: center;
+  background-color: #282c34;
+}
+
+.cssAppBoard {
+  align-content: center;
+}
+
+.cssAppRow {}
