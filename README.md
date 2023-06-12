@@ -1,5 +1,25 @@
 # reactTicTacToe
 Playing around with React and the standard Tic Tac Toe Example.
+---
+## Todo Items
+- Create a backend (call the API?)
+    - [Video](https://www.youtube.com/watch?v=ACI8EDbaXzo)
+        - He's using 
+            - Node for API
+                - Seems to be using [Express]() for the piping.
+            - A Python Server for serving up the front end using React.
+        - Part of a larger [Playlist](https://www.youtube.com/playlist?list=PL_kr51suci7XVVw4SJLZ0QQBAsL2K8Opy) that might be good.
+    - [Smoljames Video](https://www.youtube.com/watch?v=5TxF9PQaq4U)
+        - Creats a simple server
+
+    - Review Express
+- Round off the corners on my cards!!!
+- Read more about formatting.
+    - https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction
+- Find some better widgets with some animations!
+    - Continue looking through react supported HTMl Components
+        - https://react.dev/reference/react-dom/components
+    
 
 ## My source code is \
 ```bash 

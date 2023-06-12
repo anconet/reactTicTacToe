@@ -10,6 +10,50 @@ function Square({ value, onSquareClick }) {
   )
 }
 
+function Card({ cardData, onCardClick }) {
+
+  return <div
+    className="cssAppCard"
+    onClick={onCardClick}>
+    UID: {cardData.uid}
+    <ul>
+      <li>TITLE: {cardData.title}</li>
+      <li>TYPE: {cardData.cardType}</li>
+    </ul>
+  </div>
+}
+function Release() {
+  const initialCardStack = [
+    { uid: 0, cardType: 'Feature', title: "Feature1" },
+    { uid: 1, cardType: 'NUDD', title: "NUDD1" },
+    { uid: 2, cardType: 'Study', title: "Study1" },
+    { uid: 3, cardType: 'Question', title: "Question1" }
+  ];
+
+  const [releaseList, setReleaseList] = useState(initialCardStack);
+
+  function handleCardClick() {
+    console.log("Got a Card Click", releaseList.length)
+    //const newReleaseList = releaseList.slice();
+    //newReleaseList.push(<Card onCardClick={() => handleCardClick()}></Card>);
+    //newReleaseList.push(<Card onCardClick={() => handleCardClick()}></Card>);
+    //setReleaseList(newReleaseList);
+  }
+
+  //let myString = <p>2</p>;
+  //let myArray = [];
+  //myArray.push(<Card></Card>);
+  //myArray.push(<Card></Card>);
+  return (
+    <div className='cssAppRelease'>
+      {releaseList.map(card => (
+        <Card
+          cardData={card}
+          onCardClick={() => handleCardClick()}>
+        </Card>))}
+    </div>)
+}
+
 function App() {
 
   const [squares, setSquares] = useState(Array(9).fill(null));
@@ -39,11 +83,15 @@ function App() {
   }
 
   return (
-    <div className="cssAppBody">
-      <h1 className='cssAppHeader'>Anthony's Kick Ass Tic Tac Toe</h1>
+    <div className="cssAppBody" >
+      <h1 className="cssAppHeader">Anthony's Kick Ass Tic Tac Toe</h1>
       <h2>Current Game State: {gameState}</h2>
       <h2>Current Turn: {currentTurn}</h2>
-      <div className='cssAppBoard'>
+      <div className="cssAppReleaseBoard">
+        <Release />
+        <Release />
+      </div>
+      <div className="cssAppBoard">
         <div className="cssBoardRow">
           <Square value={squares[0]} onSquareClick={() => handleSquareClicks(0)}></Square>
           <Square value={squares[1]} onSquareClick={function temp() { handleSquareClicks(1) }}></Square>

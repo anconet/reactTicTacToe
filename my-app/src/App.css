@@ -5,7 +5,9 @@
 
 
 .cssAppBody {
-  text-align: center;
+  /*text-align: center;*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: grey;
   background-color: #282c34;
 }
 
@@ -14,3 +16,20 @@
 }
 
 .cssAppRow {}
+
+.cssAppReleaseBoard {
+  display: flex;
+  flex-direction: row;
+}
+
+.cssAppRelease {
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+}
+
+.cssAppCard {
+  background-color: rgb(88, 88, 88);
+  border: 2px solid rgb(50, 43, 66);
+  color: lightskyblue;
+}
