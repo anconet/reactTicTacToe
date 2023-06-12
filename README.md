@@ -2,6 +2,7 @@
 Playing around with React and the standard Tic Tac Toe Example.
 ---
 ## Todo Items
+- Need practice dyanmically adding cards.
 - Create a backend (call the API?)
     - [Video](https://www.youtube.com/watch?v=ACI8EDbaXzo)
         - He's using 
