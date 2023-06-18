@@ -1,5 +1,7 @@
 import './App.css';
 import { useState } from "react";
+//import { useEffect, useState } from "react";
+//import axios from "axios";
 
 function Square({ value, onSquareClick }) {
 
@@ -9,6 +11,19 @@ function Square({ value, onSquareClick }) {
       onClick={onSquareClick}> {value} </button>
   )
 }
+/*
+function Anthony() {
+  const [message, setMessage] = useState("Testing");
+
+  useEffect(() => {
+
+    axios.get(`http://testVSCode:8000`).then((response) => { setMessage(response.data) }).catch(() => { setMessage("error") })
+  },
+    []);
+    "axios": "^1.4.0",
+
+  return message;
+}*/
 
 function Card({ cardData, onCardClick }) {
 
@@ -22,6 +37,7 @@ function Card({ cardData, onCardClick }) {
     </ul>
   </div>
 }
+
 function Release() {
   const initialCardStack = [
     { uid: 0, cardType: 'Feature', title: "Feature1" },
@@ -88,6 +104,7 @@ function App() {
       <h2>Current Game State: {gameState}</h2>
       <h2>Current Turn: {currentTurn}</h2>
       <div className="cssAppReleaseBoard">
+        <Anthony></Anthony>
         <Release />
         <Release />
       </div>
