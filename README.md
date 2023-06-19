@@ -31,6 +31,16 @@ Playing around with React and the standard Tic Tac Toe Example.
     - Continue looking through react supported HTMl Components
         - https://react.dev/reference/react-dom/components
     
+## Reminders
+- Front End
+    - Node.js with React Framework with
+        - Axios for making HTTP request to the backend.
+    - May need to start looking at Next.js or Vite.js as create-react-app is no longer supported.
+- Back End
+    - Node.js with 
+        - Express for receiving and routing HTTPs.
+        - CORS is nice for allowing access across ports.
+        - Nodemon is nice for auto restarting the server when you change code.
 
 ## My source code is \
 ```bash 
@@ -75,9 +85,7 @@ npm start
 ```
 ---
 ## Server Side setup
-
 Express.js on Node.js
-
 ```bash
 # Create a new directory
 mkdir serverSide
@@ -86,23 +94,31 @@ cd serverside
 npm init -y
 # Install the express.js framework
 npm install express
-# npm install cors
-# npm install nodemon --save-dev
+npm install cors # Allows cross origin resrource sharing
+npm install nodemon --save-dev # Monitors code for changes and reloads them.
 ```
 ```bash
 touch package.json
+#add the below scripts
 ```
-```json
+```json 
 "scripts":{
     "start": "node server.js",
-    //"dev": "nodemon" "server.js"
+    "dev": "nodemon" "server.js"
     }
 ```
+Reinstalling the my code
 ```bash
-# Run the actual server
+# My code is
+server/server.js
+# This doesn't conflict at with any of the install for now.
+```
+```bash
+# Run the dev server. Nodemon will auto restart the server if you make code changes. Kind of nice.
+npm run dev 
+#Or just run a server
 npm run start
 ```
-
 
 # Thinking about the Data model
 Display is Child (Y) by Parent (X).

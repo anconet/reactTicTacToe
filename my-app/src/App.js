@@ -1,7 +1,7 @@
 import './App.css';
 import { useState } from "react";
-//import { useEffect, useState } from "react";
-//import axios from "axios";
+import { useEffect } from "react";
+import axios from "axios";
 
 function Square({ value, onSquareClick }) {
 
@@ -11,19 +11,21 @@ function Square({ value, onSquareClick }) {
       onClick={onSquareClick}> {value} </button>
   )
 }
-/*
+
 function Anthony() {
   const [message, setMessage] = useState("Testing");
 
   useEffect(() => {
-
-    axios.get(`http://testVSCode:8000`).then((response) => { setMessage(response.data) }).catch(() => { setMessage("error") })
+    axios.get(`http://testVSCode:8000`)
+      //.then((response) => console.log(response.data.message))
+      //.then (response) => { response.json() })
+      .then((response) => { setMessage(response.data.message) })
+      .catch(() => { setMessage("error") })
   },
     []);
-    "axios": "^1.4.0",
 
-  return message;
-}*/
+  return <div>{message}</div>;
+}
 
 function Card({ cardData, onCardClick }) {
 
