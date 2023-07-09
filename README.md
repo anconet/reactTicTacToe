@@ -104,7 +104,7 @@ touch package.json
 ```json 
 "scripts":{
     "start": "node server.js",
-    "dev": "nodemon" "server.js"
+    "dev": "nodemon server.js"
     }
 ```
 Reinstalling the my code
